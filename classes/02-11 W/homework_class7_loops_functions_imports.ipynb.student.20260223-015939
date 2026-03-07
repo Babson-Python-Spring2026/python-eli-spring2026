@@ -54,10 +54,28 @@
    "execution_count": null,
    "id": "3",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: 10\n",
+    "\n",
+    "nums = [3, 6, 2, 5, 4]\n",
+    "total = 0\n",
+    "for n in nums:\n",
+    "    if n % 2 == 0:\n",
+    "        total += n\n",
+    "    else:\n",
+    "        total -= 1\n",
+    "print(total)\n",
+    "\n",
+    "# Explanation: Even values are added to a running total while the negative numbers subtract one\n",
     "\n"
    ]
   },
@@ -81,10 +99,26 @@
    "execution_count": null,
    "id": "5",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 \n",
+      "2 2 \n",
+      "3 3 3 \n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: Honestly I dont know about this one. \n",
+    "\n",
+    "for i in range(1, 4):\n",
+    "    for j in range(i):\n",
+    "        print(i, end=\" \")\n",
+    "    print()\n",
+    "\n",
+    "# Explanation:The outer loop runs from 1 to 3 and for each i the inner loop prints i exactly i times before moving to a new line.\n",
     "\n"
    ]
   },
@@ -106,13 +140,33 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 40,
    "id": "7",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "hit 7\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: It prints 2, 3, 4, 5, and 6 each on their own line then prints \"hit 7\" and stops.\n",
+    "\n",
+    "for n in range(2, 20):\n",
+    "    if n % 7 == 0:\n",
+    "        print(\"hit\", n)\n",
+    "        break\n",
+    "    print(n)\n",
+    "\n",
+    "# Explanation: The loop counts from 2 upward and stops as soon as it reaches 7 (the first number divisible by 7) and then printing \"hit 7\" before stopping\n",
     "\n"
    ]
   },
@@ -137,10 +191,27 @@
    "execution_count": null,
    "id": "9",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Loop Invariant: Before each version, the total is the largest number seen so far in the list.\n",
+    "\n",
+    "# Prediction: 5\n",
+    "\n",
+    "nums = [5, 1, 4, 2]\n",
+    "total = 0\n",
+    "for n in nums:\n",
+    "    total = max(total, n)\n",
+    "print(total)\n",
+    "\n",
+    "# Explanation: As the loop goes through the list, total keeps the maximum value encountered and the largest number in [5, 1, 4, 2] is 5.\n",
     "\n"
    ]
   },
@@ -162,13 +233,28 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 75,
    "id": "11",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: 3\n",
+    "\n",
+    "count = 0\n",
+    "for i in range(1, 10):\n",
+    "    if i % 3 == 0:\n",
+    "        count += 1\n",
+    "print(count)\n",
+    "\n",
+    "# Explanation: The loop runs from 1 through 9 and the numbers divisible by 3 are 3, 6, and 9, so count becomes 3.\n",
     "\n"
    ]
   },
@@ -195,8 +281,9 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: 0 1, 0 2, 1 0, 2 0, 2 1\n",
+    "\n",
+    "# Explanation: The inner loop stops whenever i == j, so it only prints pairs where j is less than i or greater than i before the break occurs.\n",
     "\n"
    ]
   },
@@ -220,13 +307,40 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 91,
    "id": "15",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "5\n",
+      "4\n",
+      "2\n",
+      "1\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: 5 iterations.\n",
+    "\n",
+    "#10\n",
+    "#5\n",
+    "#4\n",
+    "#2\n",
+    "#1\n",
+    "\n",
+    "x = 20\n",
+    "while x > 1:\n",
+    "    if x % 2 == 0:\n",
+    "        x //= 2\n",
+    "    else:\n",
+    "        x -= 1\n",
+    "    print(x)\n",
+    "\n",
+    "# Explanation: Each loop either halves x if it’s even or subtracts 1 if it’s odd, and starting from 20 this process reaches 1 after 5 updates.\n",
     "\n"
    ]
   },
@@ -248,13 +362,28 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 105,
    "id": "17",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 20, 3, 40]\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: [1, 20, 3, 40]\n",
+    "\n",
+    "nums = [1, 2, 3, 4]\n",
+    "for i in range(len(nums)):\n",
+    "    if nums[i] % 2 == 0:\n",
+    "        nums[i] *= 10\n",
+    "print(nums)\n",
+    "\n",
+    "# Explanation: The loop goes through each index once, and every even number (2 and 4) is multiplied by 10 in place.\n",
     "\n"
    ]
   },
@@ -282,13 +411,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 118,
    "id": "20",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "341\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: 241\n",
+    "\n",
+    "def f(a, b=2, c=3):\n",
+    "    return a + b*10 + c*100\n",
+    "print(f(1, 4))\n",
+    "\n",
+    "# Explanation: The function sets a = 1, b = 4, and uses the default c = 3, then calculates 1 + 4*10 + 3*100 = 341.\n",
     "\n"
    ]
   },
@@ -316,7 +458,20 @@
    "outputs": [],
    "source": [
     "# Prediction:\n",
-    "# Explanation:\n",
+    "\n",
+    "#(1, 5, 7)\n",
+    "#(1, 5, 9)\n",
+    "#(1, 9, 7)\n",
+    "\n",
+    "### Problem 10 — Keyword vs positional\n",
+    "\n",
+    "def g(x, y=5, z=7):\n",
+    "    return x, y, z\n",
+    "print(g(1))\n",
+    "print(g(1, z=9))\n",
+    "print(g(1, 9))\n",
+    "\n",
+    "# Explanation: Arguments are filled left to right unless named, so defaults are used unless specified otherwise.\n",
     "\n"
    ]
   },
@@ -338,13 +493,29 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 130,
    "id": "24",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 99]\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: Yes  because the function appends 99 to the original list\n",
+    "# [1, 2, 3, 99]\n",
+    "\n",
+    "def update(nums):\n",
+    "    nums.append(99)\n",
+    "a = [1, 2, 3]\n",
+    "update(a)\n",
+    "print(a)\n",
+    "\n",
+    "# Explanation: The function modifies the same list object passed in, so appending 99 changes the caller’s list.\n",
     "\n"
    ]
   },
@@ -371,8 +542,15 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: [1, 2, 3]\n",
+    "\n",
+    "def update(nums):\n",
+    "    nums = nums + [99]\n",
+    "a = [1, 2, 3]\n",
+    "update(a)\n",
+    "print(a)\n",
+    "\n",
+    "# Explanation: nums = nums + [99] reassigns nums to a new list inside the function, so the caller’s list is unchanged.\n",
     "\n"
    ]
   },
@@ -394,13 +572,31 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 140,
    "id": "28",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1]\n",
+      "[1, 2]\n"
+     ]
+    }
+   ],
    "source": [
     "# Prediction:\n",
-    "# Explanation:\n",
+    "# [1]\n",
+    "# [1, 2]\n",
+    "\n",
+    "def add_item(item, bucket=[]):\n",
+    "    bucket.append(item)\n",
+    "    return bucket\n",
+    "print(add_item(1))\n",
+    "print(add_item(2))\n",
+    "\n",
+    "# Explanation: The default list bucket is created once and reused, so the second call keeps the previous value and appends 2 to the same list.\n",
     "\n"
    ]
   },
@@ -421,13 +617,28 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 148,
    "id": "30",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n",
+      "None\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# Prediction: 6\n",
+    "\n",
+    "def h(x):\n",
+    "    print(x + 1)\n",
+    "result = h(5)\n",
+    "print(result)\n",
+    "\n",
+    "# Explanation: The function prints 6 but does not return anything, so result is None and printing it shows None.\n",
     "\n"
    ]
   },
@@ -451,13 +662,34 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 155,
    "id": "32",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n"
+     ]
+    }
+   ],
    "source": [
-    "# Prediction:\n",
-    "# Explanation:\n",
+    "# total is always the sum of the positive numbers\n",
+    "# Prediction: 6\n",
+    "\n",
+    "### Problem 15 — Function invariant\n",
+    "\n",
+    "def sum_positive(nums):\n",
+    "    total = 0\n",
+    "    for n in nums:\n",
+    "        if n > 0:\n",
+    "            total += n\n",
+    "    return total\n",
+    "print(sum_positive([-1, 2, -3, 4]))\n",
+    "\n",
+    "\n",
+    "# Explanation:Only the positive numbers are added so the function returns 6.\n",
     "\n"
    ]
   },
@@ -490,7 +722,12 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Explanation:\n",
+    "# Explanation: Line 1 and Line 3 are valid syntax\n",
+    "\n",
+    "# Line 1 and Line 3 will run only if the packages module exists and is importable. \n",
+    "\n",
+    "# Line 2 will not run because / is not allowed in import statements.\n",
+    "\n",
     "\n"
    ]
   },
@@ -510,7 +747,9 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Explanation:\n",
+    "# Explanation: Python includes '' in sys.path so it can import modules from the directory where the script is being run.\n",
+    "\n",
+    "# The blank entry '' represents the current working directory.\n",
     "\n"
    ]
   },
@@ -541,7 +780,9 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Explanation:\n",
+    "# Explanation: The root/ directory must be on sys.path.\n",
+    "\n",
+    "# Python needs the parent directory of packages/ on sys.path so it can find the packages module when its importing.\n",
     "\n"
    ]
   },
@@ -564,7 +805,9 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Explanation:\n",
+    "# Explanation: When root/packages is on sys.path, Python treats it as the top-level directory, so packages is no longer visible as a package.\n",
+    "\n",
+    "# Python will look for a packages folder inside root/packages, which doesn’t exist.\n",
     "\n"
    ]
   },
@@ -584,7 +827,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Explanation:\n",
+    "# Explanation: Notebooks use Path.cwd() because they don’t have a __file__, while .py files use Path(__file__) to locate their own file.\n",
     "\n"
    ]
   }
@@ -596,7 +839,15 @@
    "name": "python3"
   },
   "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
    "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
    "version": "3.13.9"
   }
  },
