@@ -134,7 +134,7 @@ while True:
         break
     elif choice == 1:
         while True:
-            fn2.clear_screen()
+            fn2.clear_screen()  
             fn2.print_header('Clients level 2')
             options=['Select Client', 'Create Client'] #level 2 options
             fn2.display_menu(options)
