@@ -1,3 +1,14 @@
+'''
+Strong intro-level submission. The solution is organized, understandable, 
+and uses a nice lines approach in check_winner(). Good job turning the 
+scaffold into a coherent program.
+
+Grade 90
+
+'''
+
+
+
 """
 TIC TAC TOE — FUNCTION SCAFFOLD
 
