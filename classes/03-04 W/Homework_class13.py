@@ -1,3 +1,38 @@
+'''
+Eli — 4 / 10
+
+Overall
+
+The submission is incomplete. Several sections still contain TODO placeholders and missing explanations.
+
+Strengths
+
+Appears to understand the idea of symmetry and undoing moves.
+
+Weaknesses
+
+Many required docstrings were not replaced.
+Inline TODO comments remain.
+Some conceptual misunderstandings in the output explanation.
+
+Because the assignment required replacing all TODO sections, the work is not fully complete.
+
+AI likelihood
+
+Very low.
+
+Reasons:
+
+AI would almost never leave large TODO sections unfinished.
+The explanations contain informal phrasing and small logical gaps typical of early learners.
+
+Estimated probability of AI assistance: 5–10%
+
+GRADE 70
+
+'''
+
+
 """
 Homework: Reading Code with State / Transitions / Invariants (Tic-Tac-Toe)
 
